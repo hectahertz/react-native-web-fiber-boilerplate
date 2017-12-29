@@ -6,6 +6,7 @@ const babelLoaderConfiguration = {
   include: [
     path.resolve(__dirname, '../index.web.js'),
     path.resolve(__dirname, '../src'),
+    path.resolve(__dirname, '../node_modules/react-native-typography'),
   ],
   use: {
     loader: 'babel-loader',
