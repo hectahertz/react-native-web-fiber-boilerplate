@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { ScrollView, View, StatusBar, Text } from 'react-native';
-import { material, iOSUIKit } from 'react-native-typography';
+import { material, iOSUIKit, materialDense, materialTall } from 'react-native-typography';
 
 import Banner from './Banner';
 
@@ -43,6 +43,30 @@ class MainScreen extends React.Component<{}> {
           Test caption2Emphasized!
         </Text>
         <Text style={iOSUIKit.caption2}>Test caption2!</Text>
+
+        <Text style={materialDense.display4}>你送了一封電子郵件。</Text>
+        <Text style={materialDense.display3}>你送了一封電子郵件。</Text>
+        <Text style={materialDense.display2}>你送了一封電子郵件。</Text>
+        <Text style={materialDense.display1}>你送了一封電子郵件。</Text>
+        <Text style={materialDense.headline}>你送了一封電子郵件。</Text>
+        <Text style={materialDense.title}>你送了一封電子郵件。</Text>
+        <Text style={materialDense.subheading}>你送了一封電子郵件。</Text>
+        <Text style={materialDense.body2}>你送了一封電子郵件。</Text>
+        <Text style={materialDense.body1}>你送了一封電子郵件。</Text>
+        <Text style={materialDense.caption}>你送了一封電子郵件。</Text>
+        <Text style={materialDense.button}>你送了一封電子郵件。</Text>
+
+        <Text style={materialTall.display4}>คุณส่งอีเมลแล้ว</Text>
+        <Text style={materialTall.display3}>คุณส่งอีเมลแล้ว</Text>
+        <Text style={materialTall.display2}>คุณส่งอีเมลแล้ว</Text>
+        <Text style={materialTall.display1}>คุณส่งอีเมลแล้ว</Text>
+        <Text style={materialTall.headline}>คุณส่งอีเมลแล้ว</Text>
+        <Text style={materialTall.title}>คุณส่งอีเมลแล้ว</Text>
+        <Text style={materialTall.subheading}>คุณส่งอีเมลแล้ว</Text>
+        <Text style={materialTall.body2}>คุณส่งอีเมลแล้ว</Text>
+        <Text style={materialTall.body1}>คุณส่งอีเมลแล้ว</Text>
+        <Text style={materialTall.caption}>คุณส่งอีเมลแล้ว</Text>
+        <Text style={materialTall.button}>คุณส่งอีเมลแล้ว</Text>
       </ScrollView>
     );
   }
