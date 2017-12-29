@@ -1,7 +1,14 @@
 /* @flow */
 
 import React from 'react';
-import { ScrollView, StyleSheet, View, StatusBar, Text } from 'react-native';
+import {
+  ScrollView,
+  StyleSheet,
+  View,
+  StatusBar,
+  Text,
+  Platform,
+} from 'react-native';
 import {
   material,
   iOSUIKit,
@@ -19,29 +26,33 @@ class MainScreen extends React.Component<{}> {
       <ScrollView>
         <StatusBar backgroundColor="blue" barStyle="light-content" />
         <Banner />
-        <View style={styles.section}>
-          <Text style={styles.thin}>Web Thin</Text>
-          <Text style={styles.ultraLight}>Web UltraLight</Text>
-          <Text style={styles.light}>Web Light</Text>
-          <Text style={styles.regular}>Web Regular</Text>
-          <Text style={styles.medium}>Web Medium</Text>
-          <Text style={styles.semibold}>Web Semibold</Text>
-          <Text style={styles.bold}>Web Bold</Text>
-          <Text style={styles.heavy}>Web Heavy</Text>
-          <Text style={styles.black}>Web Black</Text>
-        </View>
+        {Platform.OS === 'web' && (
+          <View style={styles.section}>
+            <Text style={styles.thin}>Web Thin</Text>
+            <Text style={styles.ultraLight}>Web UltraLight</Text>
+            <Text style={styles.light}>Web Light</Text>
+            <Text style={styles.regular}>Web Regular</Text>
+            <Text style={styles.medium}>Web Medium</Text>
+            <Text style={styles.semibold}>Web Semibold</Text>
+            <Text style={styles.bold}>Web Bold</Text>
+            <Text style={styles.heavy}>Web Heavy</Text>
+            <Text style={styles.black}>Web Black</Text>
+          </View>
+        )}
 
-        <View style={styles.darkSection}>
-          <Text style={styles.thinWhite}>Web Thin</Text>
-          <Text style={styles.ultraLightWhite}>Web UltraLight</Text>
-          <Text style={styles.lightWhite}>Web Light</Text>
-          <Text style={styles.regularWhite}>Web Regular</Text>
-          <Text style={styles.mediumWhite}>Web Medium</Text>
-          <Text style={styles.semiboldWhite}>Web Semibold</Text>
-          <Text style={styles.boldWhite}>Web Bold</Text>
-          <Text style={styles.heavyWhite}>Web Heavy</Text>
-          <Text style={styles.blackWhite}>Web Black</Text>
-        </View>
+        {Platform.OS === 'web' && (
+          <View style={styles.darkSection}>
+            <Text style={styles.thinWhite}>Web Thin</Text>
+            <Text style={styles.ultraLightWhite}>Web UltraLight</Text>
+            <Text style={styles.lightWhite}>Web Light</Text>
+            <Text style={styles.regularWhite}>Web Regular</Text>
+            <Text style={styles.mediumWhite}>Web Medium</Text>
+            <Text style={styles.semiboldWhite}>Web Semibold</Text>
+            <Text style={styles.boldWhite}>Web Bold</Text>
+            <Text style={styles.heavyWhite}>Web Heavy</Text>
+            <Text style={styles.blackWhite}>Web Black</Text>
+          </View>
+        )}
 
         <View style={styles.section}>
           <Text style={styles.systemThin}>System Thin</Text>
